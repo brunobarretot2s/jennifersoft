@@ -1,0 +1,20 @@
+FROM store/oracle/jdk:11
+ADD view-server/server.view /app/j5/jennifer5
+EXPOSE 7900
+ENV JENNIFER_VIEW_SERVER_HOME=/app/j5/jennifer5
+ENV JENNIFER_VIEW_SERVER_CONF=${JENNIFER_VIEW_SERVER_HOME}/conf/server_view.conf
+ENV JENNIFER_VIEW_SERVER_LOG_CONF=${JENNIFER_VIEW_SERVER_HOME}/conf/logback.xml
+ENV JENNIFER_PLATFORM=java
+ENV PATH=${JAVA_HOME}/bin:${PATH}
+ENV JAVA_OPTS=" ${JAVA_OPTS} -Xms2g -Xmx2g"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -XX:+HeapDumpOnOutOfMemoryError"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -Dfile.encoding=UTF-8"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -Djennifer.lib=${JENNIFER_VIEW_SERVER_HOME}/lib"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -Djennifer.viewserver.config=${JENNIFER_VIEW_SERVER_CONF}"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -Dlogback.configurationFile=${JENNIFER_VIEW_SERVER_LOG_CONF}"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -Djennifer.help=${JENNIFER_VIEW_SERVER_HOME}/help"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -XX:+IgnoreUnrecognizedVMOptions"
+ENV JAVA_OPTS=" ${JAVA_OPTS} -XX:-OmitStackTraceInFastThrow"
+ENV JENNIFER_JAR=${JENNIFER_VIEW_SERVER_HOME}/lib/jennifer.launcher.jar
+ENV JENNIFER_MAIN_CLASS=com.jennifersoft.view.Main
+CMD java ${JAVA_OPTS} -jar ${JENNIFER_JAR} ${JENNIFER_MAIN_CLASS} start ${JENNIFER_PLATFORM}

@@ -1,0 +1,38 @@
+<configuration>
+    <!--http://logback.qos.ch/manual/configuration.html -->
+    <property name="log_dir" value="../logs"/>
+
+    <appender name="FILE_ROLLING"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/server.data.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd HH:mm:ss.SSS zzz"} [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+    <!--<file>${log_dir}/server.data.log</file>-->
+    <!--<encoder>-->
+    <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>-->
+    <!--</encoder>-->
+    <!--</appender>-->
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd HH:mm:ss.SSS zzz"} %level %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.eclipse.jetty.webapp" level="INFO"/>
+
+    <root level="info">
+        <appender-ref ref="FILE_ROLLING"/>
+        <!--<appender-ref ref="FILE" />-->
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

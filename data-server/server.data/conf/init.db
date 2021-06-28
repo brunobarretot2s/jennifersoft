@@ -1,0 +1,74 @@
+biz_group={"key":"101:0","otype":"$otype(BUSINESS)","oid":"$oid(101:0)","shortName":"a01","longName":"A01", "rules":"*a01*"}
+biz_group={"key":"101:1","otype":"$otype(BUSINESS)","oid":"$oid(101:1)","shortName":"a01","longName":"A01", "rules":"*a01*"}
+biz_group={"key":"102:0","otype":"$otype(BUSINESS)","oid":"$oid(102:0)","shortName":"a02","longName":"A02", "rules":"*a02*"}
+biz_group={"key":"102:1","otype":"$otype(BUSINESS)","oid":"$oid(102:1)","shortName":"a02","longName":"A02", "rules":"*a02*"}
+biz_group={"key":"103:0","otype":"$otype(BUSINESS)","oid":"$oid(103:0)","shortName":"a03","longName":"A03", "rules":"*a03*"}
+biz_group={"key":"103:1","otype":"$otype(BUSINESS)","oid":"$oid(103:1)","shortName":"a03","longName":"A03", "rules":"*a03*"}
+biz_group={"key":"104:0","otype":"$otype(BUSINESS)","oid":"$oid(104:0)","shortName":"a04","longName":"A04", "rules":"*a04*"}
+biz_group={"key":"104:1","otype":"$otype(BUSINESS)","oid":"$oid(104:1)","shortName":"a04","longName":"A04", "rules":"*a04*"}
+biz_group={"key":"105:0","otype":"$otype(BUSINESS)","oid":"$oid(105:0)","shortName":"a05","longName":"A05", "rules":"*a05*"}
+biz_group={"key":"105:1","otype":"$otype(BUSINESS)","oid":"$oid(105:1)","shortName":"a05","longName":"A05", "rules":"*a05*"}
+biz_group={"key":"106:0","otype":"$otype(BUSINESS)","oid":"$oid(106:0)","shortName":"a06","longName":"A06", "rules":"*a06*"}
+biz_group={"key":"106:1","otype":"$otype(BUSINESS)","oid":"$oid(106:1)","shortName":"a06","longName":"A06", "rules":"*a06*"}
+biz_group={"key":"107:0","otype":"$otype(BUSINESS)","oid":"$oid(107:0)","shortName":"a07","longName":"A07", "rules":"*a07*"}
+biz_group={"key":"107:1","otype":"$otype(BUSINESS)","oid":"$oid(107:1)","shortName":"a07","longName":"A07", "rules":"*a07*"}
+biz_group={"key":"108:0","otype":"$otype(BUSINESS)","oid":"$oid(108:0)","shortName":"a08","longName":"A08", "rules":"*a08*"}
+biz_group={"key":"108:1","otype":"$otype(BUSINESS)","oid":"$oid(108:1)","shortName":"a08","longName":"A08", "rules":"*a08*"}
+biz_group={"key":"109:0","otype":"$otype(BUSINESS)","oid":"$oid(109:0)","shortName":"a09","longName":"A09", "rules":"*a09*"}
+biz_group={"key":"109:1","otype":"$otype(BUSINESS)","oid":"$oid(109:1)","shortName":"a09","longName":"A09", "rules":"*a09*"}
+
+delta_rule= {"key":"1","rowid":1,"otype":"$otype(SYSTEM)","mxid":"$mxid(agent_service_rate)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"2","rowid":2,"otype":"$otype(SYSTEM)","mxid":"$mxid(agent_service_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"3","rowid":3,"otype":"$otype(SYSTEM)","mxid":"$mxid(active_service)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"4","rowid":4,"otype":"$otype(SYSTEM)","mxid":"$mxid(active_sql)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"5","rowid":5,"otype":"$otype(SYSTEM)","mxid":"$mxid(active_txcall)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"6","rowid":6,"otype":"$otype(SYSTEM)","mxid":"$mxid(collection_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"7","rowid":7,"otype":"$otype(SYSTEM)","mxid":"$mxid(dbc_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"8","rowid":8,"otype":"$otype(SYSTEM)","mxid":"$mxid(event_fatal_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"9","rowid":9,"otype":"$otype(SYSTEM)","mxid":"$mxid(event_warning_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"10","rowid":10,"otype":"$otype(SYSTEM)","mxid":"$mxid(event_normal_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"11","rowid":11,"otype":"$otype(SYSTEM)","mxid":"$mxid(gc_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"12","rowid":12,"otype":"$otype(SYSTEM)","mxid":"$mxid(gc_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"13","rowid":13,"otype":"$otype(SYSTEM)","mxid":"$mxid(proc_cpu)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"14","rowid":14,"otype":"$otype(SYSTEM)","mxid":"$mxid(sys_cpu)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+
+delta_rule= {"key":"15","rowid":15,"otype":"$otype(SYSTEM)","mxid":"$mxid(service_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"16","rowid":16,"otype":"$otype(SYSTEM)","mxid":"$mxid(service_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"17","rowid":17,"otype":"$otype(SYSTEM)","mxid":"$mxid(service_slow_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"18","rowid":18,"otype":"$otype(SYSTEM)","mxid":"$mxid(service_err_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"19","rowid":19,"otype":"$otype(SYSTEM)","mxid":"$mxid(sql_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"20","rowid":20,"otype":"$otype(SYSTEM)","mxid":"$mxid(sql_err_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"21","rowid":21,"otype":"$otype(SYSTEM)","mxid":"$mxid(sql_slow_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"22","rowid":22,"otype":"$otype(SYSTEM)","mxid":"$mxid(sql_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"23","rowid":23,"otype":"$otype(SYSTEM)","mxid":"$mxid(txcall_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"24","rowid":24,"otype":"$otype(SYSTEM)","mxid":"$mxid(txcall_err_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"25","rowid":25,"otype":"$otype(SYSTEM)","mxid":"$mxid(txcall_slow_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"26","rowid":26,"otype":"$otype(SYSTEM)","mxid":"$mxid(txcall_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"27","rowid":27,"otype":"$otype(SYSTEM)","mxid":"$mxid(fetch_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"28","rowid":28,"otype":"$otype(SYSTEM)","mxid":"$mxid(fetch_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"29","rowid":29,"otype":"$otype(SYSTEM)","mxid":"$mxid(concurrent_user)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+
+delta_rule= {"key":"30","rowid":30,"otype":"$otype(BUSINESS)","mxid":"$mxid(service_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"31","rowid":31,"otype":"$otype(BUSINESS)","mxid":"$mxid(service_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"32","rowid":32,"otype":"$otype(BUSINESS)","mxid":"$mxid(service_slow_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"33","rowid":33,"otype":"$otype(BUSINESS)","mxid":"$mxid(service_err_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"34","rowid":34,"otype":"$otype(BUSINESS)","mxid":"$mxid(sql_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"35","rowid":35,"otype":"$otype(BUSINESS)","mxid":"$mxid(sql_err_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"36","rowid":36,"otype":"$otype(BUSINESS)","mxid":"$mxid(sql_slow_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"37","rowid":37,"otype":"$otype(BUSINESS)","mxid":"$mxid(sql_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"38","rowid":38,"otype":"$otype(BUSINESS)","mxid":"$mxid(txcall_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"39","rowid":39,"otype":"$otype(BUSINESS)","mxid":"$mxid(txcall_err_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"40","rowid":40,"otype":"$otype(BUSINESS)","mxid":"$mxid(txcall_slow_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"41","rowid":41,"otype":"$otype(BUSINESS)","mxid":"$mxid(txcall_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"42","rowid":42,"otype":"$otype(BUSINESS)","mxid":"$mxid(fetch_count)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"43","rowid":43,"otype":"$otype(BUSINESS)","mxid":"$mxid(fetch_time)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+delta_rule= {"key":"44","rowid":44,"otype":"$otype(BUSINESS)","mxid":"$mxid(concurrent_user)" ,"oid":-1,"yyyymmdd":0,"hhmm":-100, "enable":true}
+
+cafpath={"key":"$pathid('','service=110:111')", "cafOid":100,"cafName":"CAF100","pathId":"$pathid(,service=110:111)","pathName":"0to111","pathType":"$pathtype(START)"}
+cafpath={"key":"$pathid(service=110:111,service=110:112)", "cafOid":100,"cafName":"CAF100","pathId":"$pathid(service=110:111,service=110:112)","pathName":"111to112","pathType":"$pathtype(NONE)"}
+cafpath={"key":"$pathid(service=110:112,service=110:113)", "cafOid":100,"cafName":"CAF100","pathId":"$pathid(service=110:112,service=110:113)","pathName":"112to113","pathType":"$pathtype(END)"}
+
+cafpath={"key":"$pathid(,service=117:111)", "cafOid":101,"cafName":"CAF01","pathId":"$pathid(,service=117:111)","pathName":"0to711","pathtype":"$pathtype(START)"}
+cafpath={"key":"$pathid(service=117:111,service=117:112)", "cafOid":101,"cafName":"CAF101","pathId":"$pathid(service=117:111,service=117:112)","pathName":"711to712","pathType":"$pathtype(NONE)"}
+cafpath={"key":"$pathid(service=117:112,service=117:113)", "cafOid":101,"cafName":"CAF101","pathId":"$pathid(service=117:112,service=117:113)","pathName":"712to713","pathType":"$pathtype(END)"}
+

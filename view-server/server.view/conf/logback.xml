@@ -1,0 +1,103 @@
+<configuration>
+    <!--http://logback.qos.ch/manual/configuration.html -->
+    <property name="log_dir" value="../logs" />
+
+    <appender name="FILE_ROLLING_SERVER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="com.jennifersoft.view.filter.LogbackFilter" />
+
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/server.view.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_ROLLING_ADAPTER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/adapter.view.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_ROLLING_MANAGEMENT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/management.view.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_ROLLING_RDB_EXPORT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/rdb.export.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE_ROLLING_LOGIN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log_dir}/login.view.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.eclipse.jetty" level="INFO" />
+    <logger name="org.eclipse.jetty.websocket.common.extensions.compress.CompressExtension" level="OFF" />
+
+
+    <logger name="org.springframework" level="WARN" />
+    <logger name="o.s" level="INFO" />
+
+    <!-- (ARIES-7729) Login's log  is not default. If you want to see login information in the log, remove the comment and use it. -->
+    <!--
+    <logger name="com.jennifersoft.view.web.LoginController" level="INFO">
+        <appender-ref ref="FILE_ROLLING_LOGIN" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    -->
+
+    <logger name="com.jennifersoft.view.web.interceptor.ViewInterceptor" level="INFO">
+        <appender-ref ref="FILE_ROLLING_MANAGEMENT" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="com.jennifersoft.view.adapter.util.LogUtil" level="INFO">
+        <appender-ref ref="FILE_ROLLING_ADAPTER" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="com.aries.view.rdb_export" level="INFO" additivity="false">
+        <appender-ref ref="FILE_ROLLING_RDB_EXPORT" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="FILE_ROLLING_SERVER" />
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

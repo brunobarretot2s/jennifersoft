@@ -1,0 +1,54 @@
+{
+  "adapter": [
+    {
+      "title": "ui.ext.adapter.eventlog",
+      "path": "adapter/eventlog-1.1.0.jar",
+      "id": "eventlog",
+      "class": "com.aries.eventlog.LogAdapter",
+      "type": 2,
+      "github": "https://github.com/jennifersoft/jennifer-view-adapter-eventlog"
+    },
+    {
+      "title": "ui.ext.adapter.xviewlog",
+      "path": "adapter/xviewlog-1.1.0.jar",
+      "id": "xviewlog",
+      "class": "com.aries.xviewlog.LogAdapter",
+      "type": 1,
+      "github": "https://github.com/jennifersoft/jennifer-view-adapter-xviewlog"
+    },
+    {
+      "title": "ui.ext.adapter.slack",
+      "path": "adapter/slack-1.0.0.jar",
+      "id": "slack",
+      "class": "adapter.jennifer.slack.SlackAdapter",
+      "type": 2,
+      "github": "https://github.com/jennifersoft/jennifer-view-adapter-slack"
+    },
+    {
+      "title": "ui.ext.adapter.jira",
+      "path": "adapter/jira-1.0.0.jar",
+      "id": "jira",
+      "class": "adapter.jennifer.jira.JiraAdapter",
+      "type": 2,
+      "github": "https://github.com/jennifersoft/jennifer-view-adapter-jira"
+    },
+    {
+      "title": "ui.ext.adapter.telegram",
+      "path": "adapter/telegram-1.0.0.jar",
+      "id": "telegram",
+      "class": "adapter.jennifer.telegram.TelegramAdapter",
+      "type": 2,
+      "github": "https://github.com/jennifersoft/jennifer-view-adapter-telegram"
+    }
+  ],
+  "plugin": [
+    {
+      "title": "ui.ext.plugin.xviewpopup",
+      "path": "plugin/xviewpopup-0.2.2.jar",
+      "id": "xviewpopup",
+      "class": "",
+      "type": 1,
+      "github": "https://github.com/jennifersoft/jennifer-view-plugin-xviewpopup"
+    }
+  ]
+}

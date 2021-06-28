@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  jdata-server:
+    image: data-server
+    restart: "no"
+    build:
+      context: .
+      dockerfile: data-server/Dockerfile
+    working_dir: /data-server
+    environment:
+      TZ: America/Sao_Paulo
+    ports:
+      - "5000:5000"
+    networks:
+      - jennifernetwork
+  jview-server:
+    image: view-server
+    restart: "no"
+    build:
+      context: .
+      dockerfile: view-server/Dockerfile
+    working_dir: /view-server
+    environment:
+      TZ: America/Sao_Paulo
+    ports:
+      - "7900:7900"     
+    depends_on:
+      - jdata-server  
+    networks:
+      - jennifernetwork
+networks:
+    jennifernetwork:
+        driver: bridge
